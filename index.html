@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OffSecrets - Prévia Proibida</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 8vw;
+      margin-bottom: 20px;
+    }
+
+    video {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 15px;
+      border: 3px solid #ff004c;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 5vw;
+      max-width: 500px;
+      margin-bottom: 20px;
+      line-height: 1.4;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #ff004c;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 5vw;
+      transition: background 0.3s;
+      animation: pisca 1s infinite;
+    }
+
+    @keyframes pisca {
+      0% {opacity: 1;}
+      50% {opacity: 0.4;}
+      100% {opacity: 1;}
+    }
+
+    .contador {
+      background: #222;
+      color: #ff004c;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      font-size: 5vw;
+      font-weight: bold;
+      border: 2px solid #ff004c;
+    }
+
+    @media (min-width: 600px) {
+      h1 {font-size: 36px;}
+      p {font-size: 18px;}
+      .btn {font-size: 20px;}
+      .contador {font-size: 20px;}
+    }
+
+    /* POPUP +18 */
+    .popup {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgba(0,0,0,0.95);
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .popup h2 {
+      color: #ff004c;
+      margin-bottom: 20px;
+      font-size: 30px;
+    }
+
+    .popup p {
+      max-width: 400px;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    .popup div {
+      display: flex;
+      gap: 10px;
+      flex-direction: row-reverse;
+    }
+
+    .popup button {
+      background: #ff004c;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 5px;
+      transition: background 0.3s;
+    }
+
+    .popup button:hover {
+      background: #ff3366;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="popup" id="popup">
+    <h2>🔞 Atenção +18</h2>
+    <p>Este site contém conteúdo adulto. Ao clicar em "ENTRAR", você confirma ser maior de 18 anos e concorda em acessar este material.</p>
+    <div>
+      <button onclick="entrar()">ENTRAR</button>
+      <button onclick="window.location.href='https://google.com'">SAIR</button>
+    </div>
+  </div>
+
+  <h1>🔥 OffSecrets 🔥</h1>
+
+  <div class="contador">
+    ⏳ Atenção: Restam apenas <span id="numero">5</span> acessos disponíveis hoje!
+  </div>
+
+  <video controls poster="img/preview.jpg">
+    <source src="video/offsecretsvideo.mp4" type="video/mp4">
+    Seu navegador não suporta vídeo.
+  </video>
+
+  <p>Se essa prévia já te deixou maluco... imagina o conteúdo completo dentro do nosso grupo VIP no Telegram.</p>
+
+  <a href="https://t.me/hotsecretsss" target="_blank" class="btn">
+    CLIQUE AQUI
+  </a>
+
+  <script>
+    function entrar() {
+      document.getElementById('popup').style.display = 'none';
+    }
+
+    // CONTADOR FAKE
+    let numero = 5;
+    const elemento = document.getElementById('numero');
+    setInterval(() => {
+      if (numero > 2) {
+        numero--;
+        elemento.innerText = numero;
+      }
+    }, 5000);
+  </script>
+
+</body>
+</html>
