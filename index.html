@@ -5,6 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OffSecrets - Prévia Proibida</title>
 
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1736225200599916');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1736225200599916&ev=PageView&noscript=1"/></noscript>
+  <!-- End Meta Pixel Code -->
+
   <style>
     * {
       margin: 0;
@@ -83,7 +100,6 @@
       .contador {font-size: 20px;}
     }
 
-    /* POPUP +18 */
     .popup {
       position: fixed;
       top: 0;
@@ -157,7 +173,7 @@
 
   <p>Se essa prévia já te deixou maluco... imagina o conteúdo completo dentro do nosso grupo VIP no Telegram.</p>
 
-  <a href="https://t.me/+vuDT50YBtalmZjkx" target="_blank" class="btn">
+  <a href="https://t.me/+vuDT50YBtalmZjkx" target="_blank" class="btn" onclick="fbq('trackCustom', 'ClickBotTelegram');">
     CLIQUE AQUI
   </a>
 
